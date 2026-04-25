@@ -1,11 +1,11 @@
 import React from 'react'
 import './App.css'
-import Navbar from './component/Navbar'
-import Footer from './component/footer'
-import About from './component/about'
-import Front from './component/front'
-import Port from './component/port'
-import Contact from './component/contact'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import About from './components/About'
+import Front from './components/Front'
+import Port from './components/Port'
+import Contact from './components/Contact'
 function App() {
 
   return (

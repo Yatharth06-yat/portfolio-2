@@ -3,9 +3,9 @@ import { createRoot } from 'react-dom/client'
 import { RouterProvider,createBrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
-import Front from './components/Front.jsx'
-import About from './components/About.jsx'
-import Port from './components/Port.jsx'
+import Front from './component/front.jsx'
+import About from './component/about.jsx'
+import Port from './component/port.jsx'
 const router=createBrowserRouter([{
   path:'/',
   element:<App/>,
