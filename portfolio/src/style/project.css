@@ -1,0 +1,87 @@
+.project-contaier {
+  padding: 40px 20px;
+ 
+}
+
+.project-contaier h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #beaeae;
+  
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.project-item {
+    background: linear-gradient(135deg, #0c3766, #21426f);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 0 25px #5f88db;
+  
+}
+
+.project-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.project-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;       
+  object-position: center; 
+  image-rendering: auto;   
+}
+
+.project-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.project-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.project-content p {
+  font-size: 0.95rem;
+  color: #caece7;
+  line-height: 1.5;
+}
+
+.project-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 16px;
+  background:  linear-gradient(
+    to right,
+    #5252dd 10%,
+    #7272ac 90%);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.25s ease, transform 0.2s ease;
+ margin-right: 20px;
+}
+
+.project-btn:hover {
+  background: linear-gradient(135deg, #0056d2, #003a99);
+  transform: scale(1.05);
+}
+.pppp{
+  text-align: justify;
+}
