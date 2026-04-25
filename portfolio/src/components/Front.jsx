@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style/Front.css';
 import yatharth from '../assets/imageee.jpeg'
-import cv from '../assets/yatharth2.pdf';
+import cv from '../assets/resume-2.pdf';
 import { FaGithub, FaLinkedin,FaInstagram ,FaTwitter} from "react-icons/fa";
 
 export default function Front() {
