@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import "../style/Contact.css";
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+const WHATSAPP_NUMBER = "917999117324"; // 91 = India country code
 
-  const [status, setStatus] = useState("");
+export default function Contact() {
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -17,10 +13,15 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // ✅ Here you can connect with EmailJS, Firebase, or backend API
-    console.log("Form submitted:", formData);
+    const text =
+      `👋 Hi Yatharth!%0A` +
+      `*Name:* ${formData.name}%0A` +
+      `*Email:* ${formData.email}%0A` +
+      `*Message:* ${formData.message}`;
 
-    setStatus("Message sent successfully ✅");
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+    window.open(url, "_blank");
+
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -28,7 +29,7 @@ export default function Contact() {
     <section id="contact" className="contact-section">
       <div className="contact-container">
         <h2>Contact Me</h2>
-        <p>Have a project in mind? Let’s connect 🚀</p>
+        <p>Have a project in mind? Let's connect 🚀</p>
 
         <form className="contact-form" onSubmit={handleSubmit}>
           <input
@@ -59,11 +60,9 @@ export default function Contact() {
           ></textarea>
 
           <button type="submit" className="btn-submit">
-            Send Message
+            Send Message on WhatsApp 💬
           </button>
         </form>
-
-        {status && <p className="status">{status}</p>}
       </div>
     </section>
   );

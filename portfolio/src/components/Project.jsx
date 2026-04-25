@@ -4,6 +4,10 @@ import '../style/Project.css'
 import p2 from '../assets/p2.png'
 import p3 from '../assets/pro3.png'
 import p4 from '../assets/pro4.png'
+import v1 from '../assets/v1.mp4'
+import v2 from '../assets/v2.mp4'
+import v3 from '../assets/v3.mp4'
+import v4 from '../assets/v4.mp4'
 
 const projects = [
   {
@@ -11,28 +15,28 @@ const projects = [
     title: 'AI Emergency Alert & Ambulance System',
     desc: 'AI-powered healthcare platform that analyzes symptoms, voice input, and accident images to detect emergencies in real time. Features doctor alerts, ambulance dispatch, live tracking, and blood bank support.',
     github: 'https://github.com/paliwalpriyanjal-hash/phynknight-hacksagon',
-    video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_1',
+    video: v1,
   },
   {
     img: p2,
     title: 'React Portfolio',
     desc: 'This portfolio project, built with React, showcases my skills, projects, and contact details with a modern responsive design. Features clean UI, smooth navigation, social links and a CV download option.',
     github: 'https://github.com/Yatharth06-yat/portfolio-2',
-    video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_2',
+    video: v2,
   },
   {
     img: p3,
     title: 'SwachhMap',
     desc: 'Interactive platform that lets citizens report and track public cleanliness issues in real time by uploading images with location and category. Reports appear on a live map with upvoting for urgent issues.',
     github: 'https://github.com/Yatharth06-yat/swachhmap',
-    video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_3',
+    video: v3,
   },
   {
     img: p4,
     title: 'IoT Edge Club',
     desc: 'Central hub for IoT enthusiasts, students, and professionals. Provides resources, tutorials, and project showcases with interactive guides, real-time demos, and community discussions.',
     github: 'https://github.com/Yatharth06-yat/iot-edge-club',
-    video: 'https://www.youtube.com/embed/YOUR_VIDEO_ID_4',
+    video: v4,
   },
 ]
 
@@ -54,13 +58,12 @@ export default function Project() {
               {/* Image / Video Toggle Area */}
               <div className='project-media'>
                 {openVideo[index] ? (
-                  <iframe
+                  <video
                     className='project-video'
                     src={project.video}
-                    title={project.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
+                    controls
+                    autoPlay
+                    muted
                   />
                 ) : (
                   <img src={project.img} alt={project.title} />
